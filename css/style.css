@@ -1,0 +1,42 @@
+body {
+    background-color: #F5F5F5;
+}
+
+h1 {
+    background-color: #2196F3;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    font-size: 110%;
+}
+
+h3 {
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    font-size: 95%;
+}
+
+.column {
+    float: left;
+    width: 27.33%;
+    font-family: 'Arial';
+    margin: 3%;
+    box-shadow: 1px 1px 2px #aaaaaa;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

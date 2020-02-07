@@ -16,27 +16,130 @@
 <h1>PHAROS</h1>
 
 <div class="row">
+
     <div class="column" style="background-color:#fff;">
       <h2>Élections</h2>
       <form action="">
-        <input type="radio" name="election" value="43e élection fédérale"> 43e élection fédérale<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21 octobre 2019<br><br>
-        <input type="radio" name="election" value="Élections générales provinciales"> Élections générales provinciales<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1er octobre 2018<br><br>
-        <input type="radio" name="election" value="42e élection fédérale"> 42e élection fédérale<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19 octobre 2015<br><br>
-        <input type="radio" name="election" value="Élections générales provinciales"> Élections générales provinciales<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 avril 2014<br><br>
+        <input type="radio" name="election" id="2019" value="b1" onclick="updateView(1);updateButton(1)" checked> 43e élection fédérale<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21 octobre 2019<br><br>
+        <input type="radio" name="election" id="2018" value="b2" onclick="updateView(2);updateButton(2)"> Élections générales provinciales<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1er octobre 2018<br><br>
+        <input type="radio" name="election" id="2015" value="b3" onclick="updateView(1);updateButton(1)"> 42e élection fédérale<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19 octobre 2015<br><br>
+        <input type="radio" name="election" id="2014" value="b4" onclick="updateView(2);updateButton(2)"> Élections générales provinciales<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 avril 2014<br><br>
       </form>
     </div>
-    <div class="column" style="background-color:#fff;">
-      <h2>Partis politiques fédéraux</h2>
-      <p>Some text..</p>
-    </div>
-    <div class="column" style="background-color:#fff;">
-      <h2>Actions</h2>
-      <p>Some text..</p>
-    </div>
-  </div>
 
-</body>
+    <div class="column" style="background-color:#fff;">
+
+      <h2 id="partis">Partis politiques fédéraux</h2>
+
+      <!-- Partis fédéraux -->
+
+      <div id="partis-federaux" display>
+
+        <div>
+          <input type="checkbox" id="PLC" class="parti-federal" onclick="updateButton(1)">
+          <label for="PLC">P.L.C.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti libéral du Canada<br><br></label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="PCC" class="parti-federal" onclick="updateButton(1)">
+          <label for="PCC">P.C.C.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti conservateur du Canada<br><br></label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="BQ" class="parti-federal" onclick="updateButton(1)">
+          <label for="BQ">B.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bloc Québécois<br><br></label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="NPD" class="parti-federal" onclick="updateButton(1)">
+          <label for="NPD">N.P.D.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nouveau parti démocratique<br><br></label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="PVC" class="parti-federal" onclick="updateButton(1)">
+          <label for="PVC">P.V.C.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti vert du Canada<br><br></label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="PPC" class="parti-federal" onclick="updateButton(1)">
+          <label for="PPC">P.P.C.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti populaire du Canada<br><br></label>
+        </div>
+
+
+
+      </div>
+
+      <!-- Partis provinciaux -->
+
+      <div id="partis-provinciaux">
+
+        <div>
+          <input type="checkbox" id="CAQ" class="parti-provincial" onclick="updateButton(2)">
+          <label for="CAQ">C.A.Q<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coalition avenir Québec<br><br></label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="PLQ" class="parti-provincial" onclick="updateButton(2)">
+          <label for="PLQ">P.L.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti libéral du Québec<br><br></label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="PQ" class="parti-provincial" onclick="updateButton(2)">
+          <label for="PQ">P.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti québecois<br><br></label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="QS" class="parti-provincial" onclick="updateButton(2)">
+          <label for="QS">Q.S.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Québec solidaire<br><br></label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="PVQ" class="parti-provincial" onclick="updateButton(2)">
+          <label for="PVQ">P.V.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti vert du Québec<br><br></label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="PCQ" class="parti-provincial" onclick="updateButton(2)">
+          <label for="PCQ">P.C.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti conservateur du Québec<br><br></label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="PIQ" class="parti-provincial" onclick="updateButton(2)">
+          <label for="PIQ">P.I.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti pour l'indépendance du Québec<br><br></label>
+        </div>
+
+      </div>
+
+      <p id="ax"></p>
+      <p id="bx"></p>
+      
+    </div>
+
+
+    <div class="column" style="background-color:#fff;">
+
+      <h2>Actions</h2>
+
+      <div style="text-align: center;">
+
+        <button type="button" id="connaitre" onclick="" disabled>Connaître les propositions...</button>
+        <br><br>
+  
+        <button type="button" id="comparer"  onclick="" disabled>Comparer deux propositions...</button>
+        <br>
+
+      </div>
+
+    </div>
+
+</div>
+
+<p id="demo">Some text..</p>
+
+<button type="button" onclick="textUpdate()">Try it</button>
 
 <script src="js/script.js"></script>
+
+</body>
 
 </html>

@@ -18,13 +18,62 @@
 <div class="row">
 
     <div class="column" style="background-color:#fff;">
+      
       <h2>Élections</h2>
-      <form action="">
-        <input type="radio" name="election" id="2019" value="b1" onclick="updateView(1);updateButton(1)" checked> 43e élection fédérale<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21 octobre 2019<br><br>
-        <input type="radio" name="election" id="2018" value="b2" onclick="updateView(2);updateButton(2)"> Élections générales provinciales<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1er octobre 2018<br><br>
-        <input type="radio" name="election" id="2015" value="b3" onclick="updateView(1);updateButton(1)"> 42e élection fédérale<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19 octobre 2015<br><br>
-        <input type="radio" name="election" id="2014" value="b4" onclick="updateView(2);updateButton(2)"> Élections générales provinciales<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 avril 2014<br><br>
-      </form>
+
+
+      <table style="width:100%">
+        <tr>
+          <td rowspan="2"><input type="radio" name="election" id="2019" value="b1" onclick="updateView(1);updateButton(1)" checked></td>
+          <td>43e élection fédérale</td>
+        </tr>
+        <tr>
+          <td style="font-size:90%;color:grey">21 octobre 2019</td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2"><input type="radio" name="election" id="2018" value="b2" onclick="updateView(2);updateButton(2)"></td>
+          <td>Élections générales provinciales</td>
+        </tr>
+        <tr>
+          <td style="font-size:90%;color:grey">1er octobre 2018</td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2"><input type="radio" name="election" id="2015" value="b3" onclick="updateView(1);updateButton(1)"></td>
+          <td>42e élection fédérale</td>
+        </tr>
+        <tr>
+          <td style="font-size:90%;color:grey">19 octobre 2015</td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2"><input type="radio" name="election" id="2014" value="b4" onclick="updateView(2);updateButton(2)"></td>
+          <td>Élections générales provinciales</td>
+        </tr>
+        <tr>
+          <td style="font-size:90%;color:grey">7 avril 2014</td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+
+      </table>
+
+
     </div>
 
     <div class="column" style="background-color:#fff;">
@@ -35,35 +84,80 @@
 
       <div id="partis-federaux" display>
 
-        <div>
-          <input type="checkbox" id="PLC" class="parti-federal" onclick="updateButton(1)">
-          <label for="PLC">P.L.C.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti libéral du Canada<br><br></label>
-        </div>
+        <table style="width:100%">
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="PLC" class="parti-federal" onclick="updateButton(1)"></td>
+            <td>P.L.C.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Parti Libéral du Canada</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
 
-        <div>
-          <input type="checkbox" id="PCC" class="parti-federal" onclick="updateButton(1)">
-          <label for="PCC">P.C.C.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti conservateur du Canada<br><br></label>
-        </div>
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="PCC" class="parti-federal" onclick="updateButton(1)"></td>
+            <td>P.C.C.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Parti Conservateur du Canada</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
 
-        <div>
-          <input type="checkbox" id="BQ" class="parti-federal" onclick="updateButton(1)">
-          <label for="BQ">B.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bloc Québécois<br><br></label>
-        </div>
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="BQ" class="parti-federal" onclick="updateButton(1)"></td>
+            <td>B.Q.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Bloc Québécois</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
 
-        <div>
-          <input type="checkbox" id="NPD" class="parti-federal" onclick="updateButton(1)">
-          <label for="NPD">N.P.D.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nouveau parti démocratique<br><br></label>
-        </div>
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="NPD" class="parti-federal" onclick="updateButton(1)"></td>
+            <td>N.P.D.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Nouveau Parti Démocratique</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
 
-        <div>
-          <input type="checkbox" id="PVC" class="parti-federal" onclick="updateButton(1)">
-          <label for="PVC">P.V.C.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti vert du Canada<br><br></label>
-        </div>
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="PVC" class="parti-federal" onclick="updateButton(1)"></td>
+            <td>P.V.C.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Parti Vert du Canada</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
 
-        <div>
-          <input type="checkbox" id="PPC" class="parti-federal" onclick="updateButton(1)">
-          <label for="PPC">P.P.C.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti populaire du Canada<br><br></label>
-        </div>
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="PCC" class="parti-federal" onclick="updateButton(1)"></td>
+            <td>P.C.C.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Parti Populaire du Canada</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+  
+        </table>
 
 
 
@@ -73,48 +167,100 @@
 
       <div id="partis-provinciaux">
 
-        <div>
-          <input type="checkbox" id="CAQ" class="parti-provincial" onclick="updateButton(2)">
-          <label for="CAQ">C.A.Q<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coalition avenir Québec<br><br></label>
-        </div>
+        <table style="width:100%">
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="CAQ" class="parti-provincial" onclick="updateButton(2)"></td>
+            <td>C.A.Q.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Coalition Avenir Québec</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+  
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="PLQ" class="parti-provincial" onclick="updateButton(2)"></td>
+            <td>P.L.Q.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Parti libéral du Québec</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+  
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="PQ" class="parti-provincial" onclick="updateButton(2)"></td>
+            <td>P.Q.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Parti Québécois</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+  
+  
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="QS" class="parti-provincial" onclick="updateButton(2)"></td>
+            <td>Q.S.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Québec Solidaire</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+  
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="PVQ" class="parti-provincial" onclick="updateButton(2)"></td>
+            <td>P.V.Q.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Parti vert du Québec</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+  
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="PCQ" class="parti-provincial" onclick="updateButton(2)"></td>
+            <td>P.C.Q.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Parti conservateur du Québec</td>
+          </tr>
+  
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+  
+          <tr>
+            <td rowspan="2"><input type="checkbox" id="PIQ" class="parti-provincial" onclick="updateButton(2)"></td>
+            <td>P.I.Q.</td>
+          </tr>
+          <tr>
+            <td style="font-size:90%;color:grey">Parti pour l'indépendance du Québec</td>
+          </tr>
 
-        <div>
-          <input type="checkbox" id="PLQ" class="parti-provincial" onclick="updateButton(2)">
-          <label for="PLQ">P.L.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti libéral du Québec<br><br></label>
-        </div>
-
-        <div>
-          <input type="checkbox" id="PQ" class="parti-provincial" onclick="updateButton(2)">
-          <label for="PQ">P.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti québecois<br><br></label>
-        </div>
-
-        <div>
-          <input type="checkbox" id="QS" class="parti-provincial" onclick="updateButton(2)">
-          <label for="QS">Q.S.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Québec solidaire<br><br></label>
-        </div>
-
-        <div>
-          <input type="checkbox" id="PVQ" class="parti-provincial" onclick="updateButton(2)">
-          <label for="PVQ">P.V.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti vert du Québec<br><br></label>
-        </div>
-
-        <div>
-          <input type="checkbox" id="PCQ" class="parti-provincial" onclick="updateButton(2)">
-          <label for="PCQ">P.C.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti conservateur du Québec<br><br></label>
-        </div>
-
-        <div>
-          <input type="checkbox" id="PIQ" class="parti-provincial" onclick="updateButton(2)">
-          <label for="PIQ">P.I.Q.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parti pour l'indépendance du Québec<br><br></label>
-        </div>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+  
+        </table>
 
       </div>
 
-      <p id="ax"></p>
-      <p id="bx"></p>
+      <!-- <p id="ax"></p>
+      <p id="bx"></p> -->
       
     </div>
-
 
     <div class="column" style="background-color:#fff;">
 
@@ -133,10 +279,6 @@
     </div>
 
 </div>
-
-<p id="demo">Some text..</p>
-
-<button type="button" onclick="textUpdate()">Try it</button>
 
 <script src="js/script.js"></script>
 

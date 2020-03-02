@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-CA">
+<html lang="fr-CA">
 
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
 <div class="row">
 
     <div class="column" style="background-color:#fff;">
-      
+
       <h2>Élections</h2>
 
 
@@ -28,7 +28,7 @@
           <td>43e élection fédérale</td>
         </tr>
         <tr>
-          <td style="font-size:90%;color:grey">21 octobre 2019</td>
+          <td class="detail">21 octobre 2019</td>
         </tr>
 
         <tr>
@@ -40,7 +40,7 @@
           <td>Élections générales provinciales</td>
         </tr>
         <tr>
-          <td style="font-size:90%;color:grey">1er octobre 2018</td>
+          <td class="detail">1er octobre 2018</td>
         </tr>
 
         <tr>
@@ -52,7 +52,7 @@
           <td>42e élection fédérale</td>
         </tr>
         <tr>
-          <td style="font-size:90%;color:grey">19 octobre 2015</td>
+          <td class="detail">19 octobre 2015</td>
         </tr>
 
         <tr>
@@ -64,7 +64,7 @@
           <td>Élections générales provinciales</td>
         </tr>
         <tr>
-          <td style="font-size:90%;color:grey">7 avril 2014</td>
+          <td class="detail">7 avril 2014</td>
         </tr>
 
         <tr>
@@ -90,7 +90,7 @@
             <td>P.L.C.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Parti Libéral du Canada</td>
+            <td class="detail">Parti Libéral du Canada</td>
           </tr>
   
           <tr>
@@ -102,7 +102,7 @@
             <td>P.C.C.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Parti Conservateur du Canada</td>
+            <td class="detail">Parti Conservateur du Canada</td>
           </tr>
   
           <tr>
@@ -114,7 +114,7 @@
             <td>B.Q.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Bloc Québécois</td>
+            <td class="detail">Bloc Québécois</td>
           </tr>
   
           <tr>
@@ -126,7 +126,7 @@
             <td>N.P.D.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Nouveau Parti Démocratique</td>
+            <td class="detail">Nouveau Parti Démocratique</td>
           </tr>
   
           <tr>
@@ -138,7 +138,7 @@
             <td>P.V.C.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Parti Vert du Canada</td>
+            <td class="detail">Parti Vert du Canada</td>
           </tr>
   
           <tr>
@@ -150,7 +150,7 @@
             <td>P.C.C.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Parti Populaire du Canada</td>
+            <td class="detail">Parti Populaire du Canada</td>
           </tr>
   
           <tr>
@@ -173,7 +173,7 @@
             <td>C.A.Q.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Coalition Avenir Québec</td>
+            <td class="detail">Coalition Avenir Québec</td>
           </tr>
   
           <tr>
@@ -185,7 +185,7 @@
             <td>P.L.Q.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Parti libéral du Québec</td>
+            <td class="detail">Parti Libéral du Québec</td>
           </tr>
   
           <tr>
@@ -197,7 +197,7 @@
             <td>P.Q.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Parti Québécois</td>
+            <td class="detail">Parti Québécois</td>
           </tr>
   
           <tr>
@@ -210,7 +210,7 @@
             <td>Q.S.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Québec Solidaire</td>
+            <td class="detail">Québec Solidaire</td>
           </tr>
   
           <tr>
@@ -222,7 +222,7 @@
             <td>P.V.Q.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Parti vert du Québec</td>
+            <td class="detail">Parti Vert du Québec</td>
           </tr>
   
           <tr>
@@ -234,7 +234,7 @@
             <td>P.C.Q.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Parti conservateur du Québec</td>
+            <td class="detail">Parti Conservateur du Québec</td>
           </tr>
   
           <tr>
@@ -246,7 +246,7 @@
             <td>P.I.Q.</td>
           </tr>
           <tr>
-            <td style="font-size:90%;color:grey">Parti pour l'indépendance du Québec</td>
+            <td class="detail">Parti pour l'indépendance du Québec</td>
           </tr>
 
           <tr>
@@ -268,11 +268,12 @@
 
       <div style="text-align: center;">
 
-        <button type="button" id="connaitre" onclick="window.location.href = 'connaitre.html';" disabled>Connaître les propositions...</button>
+        <button type="button" id="connaitre" onclick="connaitre()" disabled>Connaître les propositions...</button>
         <br><br>
   
-        <button type="button" id="comparer"  onclick="window.location.href = 'comparer.html';" disabled>Comparer deux propositions...</button>
+        <button type="button" id="comparer"  onclick="comparer()" disabled>Comparer deux propositions...</button>
         <br>
+        &nbsp;
 
       </div>
 

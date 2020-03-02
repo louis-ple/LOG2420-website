@@ -5,13 +5,9 @@ p.style.display = "none";
 var connaitreButton = document.getElementById("connaitre");
 var comparerButton = document.getElementById("comparer");
 
-function textUpdate() {
-
-    var txt1 = "Current Time: ";
-    txt1 += Date();
-
-    document.getElementById("demo").innerHTML = "Paragraph changed.";
-    window.alert("Text will be modified!\n" + txt1);
+if(0==0)
+{
+    document.getElementsById("PartyName").innerHTML = "DEF";
 }
 
 function updateButton(param)
@@ -105,3 +101,12 @@ function updateView(param)
     }
 }
 
+function connaitre()
+{
+    // var fedeCB = document.getElementsByClassName("parti-federal");
+    // var provCB = document.getElementsByClassName("parti-provincial");
+
+    window.location.href = 'connaitre.html';
+
+    document.getElementsById("PartyName").innerHTML = "DEF";
+}

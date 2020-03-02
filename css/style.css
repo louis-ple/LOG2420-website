@@ -23,6 +23,26 @@ h3 {
     font-size: 95%;
 }
 
+button
+{
+    font-family: 'Roboto', sans-serif;
+    font-size:102%;
+    border: 0px;
+    width: 90%;
+    height: 6vh;
+}
+
+button:enabled
+{
+    background-color: #2196F3;
+    font-family: 'Roboto', sans-serif;
+    font-size:102%;
+    border: 0px;
+    width: 90%;
+    height: 6vh;
+    color: #fff;
+}
+
 .column {
     float: left;
     width: 27.33%;

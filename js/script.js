@@ -110,3 +110,13 @@ function connaitre()
 
     document.getElementsById("PartyName").innerHTML = "DEF";
 }
+
+function comparer()
+{
+    // var fedeCB = document.getElementsByClassName("parti-federal");
+    // var provCB = document.getElementsByClassName("parti-provincial");
+
+    window.location.href = 'comparer.html';
+
+    document.getElementsById("PartyName1").innerHTML = "DEF";
+}

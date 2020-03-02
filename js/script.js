@@ -5,11 +5,6 @@ p.style.display = "none";
 var connaitreButton = document.getElementById("connaitre");
 var comparerButton = document.getElementById("comparer");
 
-if(0==0)
-{
-    document.getElementsById("PartyName").innerHTML = "DEF";
-}
-
 function updateButton(param)
 {
     var i = 0;

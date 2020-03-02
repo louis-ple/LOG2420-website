@@ -44,6 +44,24 @@ button:enabled
     color: #fff;
 }
 
+
+
+.star + label{
+    background:url('A_Black_Star.png') no-repeat;
+    height: 200px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+.star:checked + label{
+    background:url('A_Black_Star.png') no-repeat;
+    height: 200px;
+    width: 16px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
 .column {
     float: left;
     width: 27.33%;

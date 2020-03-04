@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pharos</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -22,7 +23,7 @@
 
 <table style="width:100%" cellspacing="0" cellpadding="0">
     <tr class="top">
-        <td id="PartyName">PartyName</td>
+        <td id="lblPartyName">Party Name</td>
         <td><input type="checkbox" id="star" class="star"></span></td>
     </tr>
     <tr class="category">
@@ -85,7 +86,10 @@
    
 </div>
 
-<script src="js/script.js"></script>
+<script type="text/javascript">
+    var urlParams = new URLSearchParams(window.location.search);
+    window.document.getElementById("lblPartyName").innerHTML = urlParams.get("party");
+</script>
 
 </body>
 </html>

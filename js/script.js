@@ -1,117 +1,135 @@
-var p = document.getElementById("partis-provinciaux");
-p.style.display = "none";
+var SelectedElection = "2019federal";
+var FedArray = new Array();       //This array contains only values of checkboxes that are checked.
+var ProArray = new Array();
 
-
-var connaitreButton = document.getElementById("connaitre");
-var comparerButton = document.getElementById("comparer");
-
-function updateButton(param)
+function ShowParties(radio)
 {
-    var i = 0;
+    SelectedElection = radio.value;
+    
+    var divFed = document.getElementById("partis-federaux");
+    var divPro = document.getElementById("partis-provinciaux");
 
-    if(param==1) //Parti fédéral
+    switch(radio.value)
     {
-        var fedeCB = document.getElementsByClassName("parti-federal");
-        var fedeChecked = 0;
-        for (i = 0; i < fedeCB.length; i++) {
-            if(fedeCB[i].checked)
+        case "2019federal" :
+        case "2015federal" :
+            divFed.style.display = "block";
+            divPro.style.display = "none";
+            break;
+        case "2018provincial" :
+        case "2014provincial" :
+            divFed.style.display = "none";
+            divPro.style.display = "block";
+            break;
+    }
+}
+
+function EnableActionsFederal(checkbox)
+{
+    if(checkbox.checked)
+    {
+        FedArray.push(checkbox.value);
+    }
+    else
+    {
+        for(var i = 0; i < FedArray.length; i++)
+        {
+            if(checkbox.value == FedArray[i])
             {
-                fedeChecked++;
+                FedArray.splice(i, 1);
             }
         }
-
-        if(fedeChecked==1)
-        {
-            connaitreButton.disabled=false;
-            comparerButton.disabled=true;
-        }
-        else if(fedeChecked == 2)
-        {
-            connaitreButton.disabled=true;
-            comparerButton.disabled=false;
-        }
-        else
-        {
-            connaitreButton.disabled=true;
-            comparerButton.disabled=true;
-        }
-
-
     }
 
-    if(param==2)    //Parti provincial
+    if(FedArray.length == 1)
     {
-        var provCB = document.getElementsByClassName("parti-provincial");
-        var provChecked = 0;
-        for (i = 0; i < provCB.length; i++) {
-            if(provCB[i].checked)
+        document.getElementById("actionConnaitre").disabled = false;
+        document.getElementById("actionComparer").disabled = true;
+    }    
+    else if(FedArray.length == 2)
+    {
+        document.getElementById("actionConnaitre").disabled = true;
+        document.getElementById("actionComparer").disabled = false;        
+    }
+    else
+    {
+        document.getElementById("actionConnaitre").disabled = true;
+        document.getElementById("actionComparer").disabled = true;        
+    }
+}
+
+function EnableActionsProvincial(checkbox)
+{
+    if(checkbox.checked)
+    {
+        ProArray.push(checkbox.value);
+    }
+    else
+    {
+        for(var i = 0; i < ProArray.length; i++)
+        {
+            if(checkbox.value == ProArray[i])
             {
-                provChecked++;
+                ProArray.splice(i, 1);          //array.splice(position, quantity) --- at what position do we remove an item, and how many do we remove from that position
             }
         }
-
-        if(provChecked==1)
-        {
-            connaitreButton.disabled=false;
-            comparerButton.disabled=true;
-        }
-        else if(provChecked == 2)
-        {
-            connaitreButton.disabled=true;
-            comparerButton.disabled=false;
-        }
-        else
-        {
-            connaitreButton.disabled=true;
-            comparerButton.disabled=true;
-        }
     }
 
-    document.getElementById("ax").innerHTML = "Federal Boxes checked = " + fedeChecked;
-    document.getElementById("bx").innerHTML = "Provincial Boxes checked = " + provChecked;
-}
-
-
-function updateView(param)
-{
-    var fed = document.getElementById("partis-federaux");
-    var prov = document.getElementById("partis-provinciaux");
-
-
-
-    if(param==1)
+    if(ProArray.length == 1)
     {
-        document.getElementById("partis").innerHTML = "Partis politiques fédéraux";
-        fed.style.display="block";
-        prov.style.display = "none";
-        view = param;
+        document.getElementById("actionConnaitre").disabled = false;
+        document.getElementById("actionComparer").disabled = true;
     }
-
-    if(param==2)
+    else if(ProArray.length == 2)
     {
-        document.getElementById("partis").innerHTML = "Partis politiques provinciaux";
-        prov.style.display="block";
-        fed.style.display = "none";
-        view = param;
+        document.getElementById("actionConnaitre").disabled = true;
+        document.getElementById("actionComparer").disabled = false;
+    }
+    else
+    {
+        document.getElementById("actionConnaitre").disabled = true;
+        document.getElementById("actionComparer").disabled = true;        
     }
 }
 
-function connaitre()
+function ShowPropositions(button)
 {
-    // var fedeCB = document.getElementsByClassName("parti-federal");
-    // var provCB = document.getElementsByClassName("parti-provincial");
+    var party;
 
-    window.location.href = 'connaitre.html';
-
-    document.getElementsById("PartyName").innerHTML = "DEF";
+    switch (SelectedElection)
+    {
+        case "2019federal":
+        case "2015federal":
+            party = FedArray[0];
+            break;
+        case "2018provincial":
+        case "2014provincial":
+            party = ProArray[0];
+            break;
+    }
+    
+    window.location.href = "./connaitre.html?party=" + party;
 }
 
-function comparer()
+function ShowComparison(button)
 {
-    // var fedeCB = document.getElementsByClassName("parti-federal");
-    // var provCB = document.getElementsByClassName("parti-provincial");
+    var party1;
+    var party2;
 
-    window.location.href = 'comparer.html';
+    switch (SelectedElection)
+    {
+        case "2019federal":
+        case "2015federal":
+            party1 = FedArray[0];
+            party2 = FedArray[1];
+            break;
+        case "2018provincial":
+        case "2014provincial":
+            party1 = ProArray[0];
+            party2 = ProArray[1];
+            break;
+    }
 
-    document.getElementsById("PartyName1").innerHTML = "DEF";
+
+    var child = window.location.href = "./comparer.html?party1=" + party1 + "&party2=" + party2;
 }

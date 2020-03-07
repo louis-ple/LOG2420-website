@@ -14,56 +14,46 @@
 
 <h1>PHAROS</h1>
 
-<div class="row">
+  <div class="column" id="elections" style="background-color:#fff;">
 
-    <div class="column" id="elections" style="background-color:#fff;">
+    <h2>Élections</h2>
+    <!-- Rempli depuis fichier JSON grâce au script JS plus bas -->
 
-      <h2>Élections</h2>
+  </div>
 
-      <!-- Rempli depuis fichier JSON grâce au script JS plus bas -->
+  <div class="column" style="background-color:#fff;">
 
-    </div>
+    <div id="partis-federaux" class="sections" display>
 
-    <div class="column" style="background-color:#fff;">
-
-      
-
-      <div id="partis-federaux" class="sections" display>
-
-        <h2 id="partis">Partis politiques fédéraux</h2>
-
-        <!-- Rempli depuis fichier JSON grâce au script JS -->
-
-      </div>
-
-      <div id="partis-provinciaux" style="display: none;">
-
-        <h2 id="partis">Partis politiques provinciaux</h2>
-
-        <!-- Rempli depuis fichier JSON grâce au script JS -->
-
-      </div>
-      
-    </div>
-
-    <div class="column" style="background-color:#fff;">
-
-      <h2>Actions</h2>
-
-      <div style="text-align: center;">
-
-        <button class="push" type="button" id="actionConnaitre" onclick="ShowPropositions(this);" disabled>Connaître les propositions...</button>
-        <br><br>
-  
-        <button class="push" type="button" id="actionComparer" onclick="ShowComparison(this);" disabled>Comparer deux propositions...</button>
-        <br>
-        &nbsp;
-
-      </div>
+      <h2 id="partis">Partis politiques fédéraux</h2>
+      <!-- Rempli depuis fichier JSON grâce au script JS -->
 
     </div>
 
-</div>
+    <div id="partis-provinciaux" style="display: none;">
+
+      <h2 id="partis">Partis politiques provinciaux</h2>
+      <!-- Rempli depuis fichier JSON grâce au script JS -->
+
+    </div>
+    
+  </div>
+
+  <div class="column" style="background-color:#fff;">
+
+    <h2>Actions</h2>
+
+    <div style="text-align: center;">
+
+      <button class="push" type="button" id="actionConnaitre" onclick="ShowPropositions(this);" disabled>Connaître les propositions...</button>
+      <br><br>
+
+      <button class="push" type="button" id="actionComparer" onclick="ShowComparison(this);" disabled>Comparer deux propositions...</button>
+      <br>&nbsp;
+
+    </div>
+
+  </div>
 
 <script src="js/script.js"></script>
 

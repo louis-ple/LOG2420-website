@@ -94,8 +94,8 @@ input[type=checkbox][class^="star"] + label
 {
     background: black;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    height: 4vh;
-    width: 4vh;
+    height: 5vh;
+    width: 5vh;
     display:inline-block;
     padding: 0 0 0 0px;
 }
@@ -103,9 +103,10 @@ input[type=checkbox][class^="star"] + label
 input[type=checkbox][class^="star"]:checked + label
 {
     background: gold;
+    border: #aaaaaa;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    height: 4vh;
-    width: 4vh;
+    height: 5vh;
+    width: 5vh;
     display:inline-block;
     padding: 0 0 0 0px;
 }

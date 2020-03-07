@@ -58,7 +58,7 @@ button:enabled
     background:url('A_Black_Star.png') no-repeat;
     height: 200px;
     width: 16px;
-    display:inline-block;
+    display: inline-block;
     padding: 0 0 0 0px;
 }
 
@@ -77,7 +77,7 @@ button:enabled
 
 .checked {
     color: orange;
-  }
+}
 
 .top{
     font-family: 'Roboto', sans-serif;
@@ -104,6 +104,10 @@ button:enabled
 
 .separation{
     background-color: #F5F5F5;
+}
+
+.emptyRow {
+    height: 20px;
 }
 
 @media screen and (max-width: 600px) {

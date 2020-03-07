@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pharos</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
 
 </head>
@@ -17,243 +16,32 @@
 
 <div class="row">
 
-    <div class="column" style="background-color:#fff;">
+    <div class="column" id="elections" style="background-color:#fff;">
 
       <h2>Élections</h2>
 
-      <table style="width:100%">
-        <tr>
-          <td rowspan="2"><input type="radio" name="electionChoices" value="2019federal" onclick="ShowParties(this);" checked></td>
-          <td>43e élection fédérale</td>
-        </tr>
-        <tr>
-          <td class="detail">21 octobre 2019</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td rowspan="2"><input type="radio" name="electionChoices" value="2018provincial" onclick="ShowParties(this);"></td>
-          <td>Élections générales provinciales</td>
-        </tr>
-        <tr>
-          <td class="detail">1er octobre 2018</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td rowspan="2"><input type="radio" name="electionChoices" value="2015federal" onclick="ShowParties(this);"></td>
-          <td>42e élection fédérale</td>
-        </tr>
-        <tr>
-          <td class="detail">19 octobre 2015</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-        </tr>
-
-        <tr>
-          <td rowspan="2"><input type="radio" name="electionChoices" value="2014provincial" onclick="ShowParties(this);"></td>
-          <td>Élections générales provinciales</td>
-        </tr>
-        <tr>
-          <td class="detail">7 avril 2014</td>
-        </tr>
-
-        <tr>
-          <td>&nbsp;</td>
-        </tr>
-
-      </table>
-
+      <!-- Rempli depuis fichier JSON grâce au script JS plus bas -->
 
     </div>
 
     <div class="column" style="background-color:#fff;">
 
-      <h2 id="partis">Partis politiques fédéraux</h2>
-
-      <!-- Partis fédéraux -->
+      
 
       <div id="partis-federaux" class="sections" display>
 
-        <table style="width:100%">
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="P.L.C." class="parti-federal" onclick="EnableActionsFederal(this);"></td>
-            <td>P.L.C.</td>
-          </tr>
-          <tr>
-            <td class="detail">Parti Libéral du Canada</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
+        <h2 id="partis">Partis politiques fédéraux</h2>
 
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="P.C.C." class="parti-federal" onclick="EnableActionsFederal(this);"></td>
-            <td>P.C.C.</td>
-          </tr>
-          <tr>
-            <td class="detail">Parti Conservateur du Canada</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="B.Q." class="parti-federal" onclick="EnableActionsFederal(this);"></td>
-            <td>B.Q.</td>
-          </tr>
-          <tr>
-            <td class="detail">Bloc Québécois</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="N.P.D." class="parti-federal" onclick="EnableActionsFederal(this);"></td>
-            <td>N.P.D.</td>
-          </tr>
-          <tr>
-            <td class="detail">Nouveau Parti Démocratique</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="P.V.C." class="parti-federal" onclick="EnableActionsFederal(this);"></td>
-            <td>P.V.C.</td>
-          </tr>
-          <tr>
-            <td class="detail">Parti Vert du Canada</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="P.C.C." class="parti-federal" onclick="EnableActionsFederal(this);"></td>
-            <td>P.C.C.</td>
-          </tr>
-          <tr>
-            <td class="detail">Parti Populaire du Canada</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-  
-        </table>
-
-
+        <!-- Rempli depuis fichier JSON grâce au script JS -->
 
       </div>
 
-      <!-- Partis provinciaux -->
-
       <div id="partis-provinciaux" style="display: none;">
 
-        <table style="width:100%">
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="C.A.Q." class="parti-provincial" onclick="EnableActionsProvincial(this);"></td>
-            <td>C.A.Q.</td>
-          </tr>
-          <tr>
-            <td class="detail">Coalition Avenir Québec</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-  
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="P.L.Q." class="parti-provincial" onclick="EnableActionsProvincial(this);"></td>
-            <td>P.L.Q.</td>
-          </tr>
-          <tr>
-            <td class="detail">Parti Libéral du Québec</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-  
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="P.Q." class="parti-provincial" onclick="EnableActionsProvincial(this);"></td>
-            <td>P.Q.</td>
-          </tr>
-          <tr>
-            <td class="detail">Parti Québécois</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-  
-  
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="Q.S." class="parti-provincial" onclick="EnableActionsProvincial(this);"></td>
-            <td>Q.S.</td>
-          </tr>
-          <tr>
-            <td class="detail">Québec Solidaire</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-  
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="P.V.Q." class="parti-provincial" onclick="EnableActionsProvincial(this);"></td>
-            <td>P.V.Q.</td>
-          </tr>
-          <tr>
-            <td class="detail">Parti Vert du Québec</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-  
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="P.C.Q." class="parti-provincial" onclick="EnableActionsProvincial(this);"></td>
-            <td>P.C.Q.</td>
-          </tr>
-          <tr>
-            <td class="detail">Parti Conservateur du Québec</td>
-          </tr>
-  
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-  
-          <tr>
-            <td rowspan="2"><input type="checkbox" value="P.I.Q." class="parti-provincial" onclick="EnableActionsProvincial(this);"></td>
-            <td>P.I.Q.</td>
-          </tr>
-          <tr>
-            <td class="detail">Parti pour l'indépendance du Québec</td>
-          </tr>
+        <h2 id="partis">Partis politiques provinciaux</h2>
 
-          <tr>
-            <td>&nbsp;</td>
-          </tr>
-  
-        </table>
-
+        <!-- Rempli depuis fichier JSON grâce au script JS -->
+        
       </div>
       
     </div>
@@ -277,7 +65,7 @@
 
 </div>
 
-
+<script src="js/script.js"></script>
 
 </body>
 

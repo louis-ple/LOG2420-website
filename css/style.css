@@ -45,23 +45,6 @@ button:enabled
 }
 
 
-
-.star + label{
-    background:url('A_Black_Star.png') no-repeat;
-    height: 200px;
-    width: 16px;
-    display:inline-block;
-    padding: 0 0 0 0px;
-}
-
-.star:checked + label{
-    background:url('A_Black_Star.png') no-repeat;
-    height: 200px;
-    width: 16px;
-    display: inline-block;
-    padding: 0 0 0 0px;
-}
-
 .column {
     float: left;
     width: 27.33%;
@@ -75,9 +58,6 @@ button:enabled
     color:grey;
 }
 
-.checked {
-    color: orange;
-}
 
 .top{
     font-family: 'Roboto', sans-serif;
@@ -106,9 +86,32 @@ button:enabled
     background-color: #F5F5F5;
 }
 
-.emptyRow {
-    height: 20px;
+input[type=checkbox][class^="star"]{
+    display:none;
 }
+
+input[type=checkbox][class^="star"] + label
+{
+    /* background-color: #cccccc;
+    background-image: url("t.png"); */
+    background: black;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    height: 4vh;
+    width: 4vh;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+   
+input[type=checkbox][class^="star"]:checked + label
+{
+    background: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    height: 4vh;
+    width: 4vh;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
 
 @media screen and (max-width: 600px) {
     .column {
